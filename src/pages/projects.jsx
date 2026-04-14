@@ -24,13 +24,11 @@ export default function Projects() {
             A system that manages vehicle parking. It helps track vehicles,
             manage parking spaces, and improve organization.
           </p>
-
-          <button
-            style={styles.button}
-            onClick={() => openProject("http://localhost:5182/")}
-          >
-            View Project
-          </button>
+<button
+  onClick={() => window.open("https://parking-topaz.vercel.app/", "_blank")}
+>
+  Parking Management System
+</button>
         </div>
 
         {/* PROJECT 2 */}
