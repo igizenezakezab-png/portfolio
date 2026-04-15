@@ -42,9 +42,9 @@ export default function Projects() {
 
           <button
             style={styles.button}
-            onClick={() => openProject("http://localhost:5178/")}
+            onClick={() => openProject("https://todo-app-eight-ecru-89.vercel.app/","_blank")}
           >
-            View Project
+            TODO APP
           </button>
         </div>
 
