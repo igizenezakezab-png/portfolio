@@ -34,7 +34,7 @@ export default function Projects() {
           </p>
 
           <a 
-            href="https://todo-app-chi-self-29.vercel.app/" 
+            href="https://todo-app-chi-self-29.vercel.app/"
             target="_blank" 
             rel="noopener noreferrer"
             style={styles.buttonLink}
