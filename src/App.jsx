@@ -5,12 +5,10 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Skills from "./pages/Skills";
 import Projects from "./pages/projects";
-<p></p>
 
 export default function App() {
   return (
     <>
-      {/* NAVBAR */}
       <nav style={styles.nav}>
         <Link style={styles.link} to="/">Home</Link>
         <Link style={styles.link} to="/about">About</Link>
@@ -19,7 +17,6 @@ export default function App() {
         <Link style={styles.link} to="/contact">Contact</Link>
       </nav>
 
-      {/* ROUTES */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

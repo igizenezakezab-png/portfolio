@@ -4,7 +4,6 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 export default function Contact() {
   const [form, setForm] = useState({
     name: "",
-    email: "",
     phone_number: "",
     whatsapp_number: "",
   });
@@ -20,7 +19,6 @@ export default function Contact() {
 
     setForm({
       name: "",
-      email: "",
       phone_number: "",
       whatsapp_number: "",
     });
