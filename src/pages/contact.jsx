@@ -15,13 +15,6 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Message sent successfully!");
-    console.log(form);
-
-    setForm({
-      name: "",
-      phone_number: "",
-      whatsapp_number: "",
-    });
   };
 
   return (
@@ -29,7 +22,6 @@ export default function Contact() {
       <h1 style={styles.title}>Contact Me</h1>
 
       <div style={styles.grid}>
-
         {/* FORM */}
         <form onSubmit={handleSubmit} style={styles.form}>
           <input
@@ -38,7 +30,6 @@ export default function Contact() {
             value={form.name}
             onChange={handleChange}
             style={styles.input}
-            required
           />
 
           <input
@@ -47,7 +38,6 @@ export default function Contact() {
             value={form.phone_number}
             onChange={handleChange}
             style={styles.input}
-            required
           />
 
           <input
@@ -56,7 +46,6 @@ export default function Contact() {
             value={form.whatsapp_number}
             onChange={handleChange}
             style={styles.input}
-            required
           />
 
           <button type="submit" style={styles.button}>
@@ -64,7 +53,7 @@ export default function Contact() {
           </button>
         </form>
 
-        {/* SOCIAL MEDIA */}
+        {/* ✅ SOCIAL MEDIA (RESTORED) */}
         <div style={styles.infoBox}>
           <h2>My Social Media</h2>
 
@@ -92,7 +81,6 @@ export default function Contact() {
             </a>
           </p>
         </div>
-
       </div>
     </div>
   );
@@ -101,7 +89,7 @@ export default function Contact() {
 /* STYLES */
 const styles = {
   container: {
-    padding: "40px",
+    padding: "20px",
     background: "#0f172a",
     minHeight: "100vh",
     color: "white",
@@ -109,21 +97,24 @@ const styles = {
 
   title: {
     textAlign: "center",
-    marginBottom: "30px",
+    marginBottom: "20px",
+    fontSize: "28px",
   },
 
   grid: {
     display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    gap: "30px",
+    gridTemplateColumns: "1fr", // mobile first
+    gap: "20px",
+    maxWidth: "900px",
+    margin: "0 auto",
   },
 
   form: {
     display: "flex",
     flexDirection: "column",
-    gap: "15px",
+    gap: "12px",
     background: "#1e293b",
-    padding: "20px",
+    padding: "15px",
     borderRadius: "10px",
   },
 
@@ -131,6 +122,7 @@ const styles = {
     padding: "10px",
     borderRadius: "5px",
     border: "none",
+    width: "100%",
   },
 
   button: {
@@ -144,7 +136,7 @@ const styles = {
 
   infoBox: {
     background: "#1e293b",
-    padding: "20px",
+    padding: "15px",
     borderRadius: "10px",
   },
 
@@ -152,12 +144,14 @@ const styles = {
     display: "flex",
     alignItems: "center",
     gap: "10px",
-    margin: "15px 0",
+    margin: "10px 0",
+    flexWrap: "wrap",
   },
 
   link: {
     color: "#38bdf8",
     textDecoration: "none",
     fontWeight: "bold",
+    wordBreak: "break-word",
   },
 };
