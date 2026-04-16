@@ -23,9 +23,7 @@ export default function Projects() {
 
           <button
             style={styles.button}
-            onClick={() =>
-              openProject("https://parking-topaz.vercel.app/")
-            }
+            onClick={() => openProject("https://parking-topaz.vercel.app/")}
           >
             Parking Management System
           </button>
@@ -41,9 +39,7 @@ export default function Projects() {
 
           <button
             style={styles.button}
-            onClick={() =>
-              openProject("https://todo-app-xntu.vercel.app/")
-            }
+            onClick={() => openProject("https://todo-app-xntu.vercel.app/")}
           >
             TODO APP
           </button>
@@ -54,7 +50,6 @@ export default function Projects() {
   );
 }
 
-/* STYLES */
 const styles = {
   container: {
     minHeight: "100vh",
