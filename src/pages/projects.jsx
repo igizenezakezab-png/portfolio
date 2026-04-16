@@ -1,4 +1,12 @@
 export default function Projects() {
+  const handleEnter = (e) => {
+    e.currentTarget.style.transform = "scale(1.03)";
+  };
+
+  const handleLeave = (e) => {
+    e.currentTarget.style.transform = "scale(1)";
+  };
+
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>My Projects</h1>
@@ -10,8 +18,13 @@ export default function Projects() {
       <div style={styles.grid}>
 
         {/* PARKING PROJECT */}
-        <div style={styles.card}>
+        <div
+          style={styles.card}
+          onMouseEnter={handleEnter}
+          onMouseLeave={handleLeave}
+        >
           <h2 style={styles.projectTitle}>🚗 Parking Management System</h2>
+
           <p style={styles.desc}>
             A system that manages vehicle parking and helps organize spaces.
           </p>
@@ -67,6 +80,7 @@ const styles = {
     borderRadius: "15px",
     textAlign: "left",
     transition: "0.3s ease",
+    transform: "scale(1)",
   },
 
   projectTitle: {
