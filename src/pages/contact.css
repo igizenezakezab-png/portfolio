@@ -1,0 +1,89 @@
+/* MAIN */
+.contact-container {
+  padding: 40px;
+  background: #0f172a;
+  min-height: 100vh;
+  color: white;
+}
+
+/* TITLE */
+.contact-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* GRID (PC DEFAULT) */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* INPUT */
+.input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}
+
+/* BUTTON */
+.btn {
+  padding: 10px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* SOCIAL BOX */
+.social-box {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* SOCIAL LINKS */
+.social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.social a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ========================= */
+/* 📱 MOBILE RESPONSIVE */
+/* ========================= */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 15px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-box,
+  .contact-form {
+    padding: 15px;
+  }
+}

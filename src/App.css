@@ -1,60 +1,64 @@
 /* NAVBAR */
-.navbar {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #0f172a;
-  padding: 15px 20px;
+  padding: 15px 40px;
+  background: rgba(15, 23, 42, 0.9);
   color: white;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 20px;
+/* LOGO */
+nav h2 {
+  color: #38bdf8;
 }
 
-/* LINKS */
-.nav-links {
+/* LINKS DESKTOP */
+.links {
   display: flex;
   gap: 20px;
 }
 
-.nav-links a {
+.links a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: #38bdf8;
 }
 
 /* HAMBURGER */
 .hamburger {
-  font-size: 25px;
+  font-size: 26px;
   cursor: pointer;
   display: none;
 }
 
-/* ========================= */
-/* 📱 MOBILE */
-/* ========================= */
-
+/* MOBILE */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
   }
 
-  .nav-links {
+  .links {
     display: none;
+  }
+
+  .links.active {
+    display: flex;
     flex-direction: column;
     position: absolute;
     top: 60px;
-    right: 0;
+    right: 10px;
     background: #1e293b;
-    width: 200px;
-    padding: 20px;
-    gap: 15px;
-  }
-
-  .nav-links.active {
-    display: flex;
+    padding: 15px;
+    border-radius: 10px;
+    width: 180px;
   }
 }
