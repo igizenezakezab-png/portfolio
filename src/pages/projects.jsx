@@ -26,23 +26,6 @@ export default function Projects() {
           </a>
         </div>
 
-        {/* TODO PROJECT */}
-        <div style={styles.card}>
-          <h2 style={styles.projectTitle}>✅ Todo App</h2>
-          <p style={styles.desc}>
-            A task manager app that allows users to add, update, and delete daily tasks.
-          </p>
-
-          <a
-            href="https://todo-app-chi-self-29.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={styles.buttonLink}
-          >
-            Open Project
-          </a>
-        </div>
-
       </div>
     </div>
   );
