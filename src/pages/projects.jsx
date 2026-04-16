@@ -42,7 +42,7 @@ export default function Projects() {
 
           <button
             style={styles.button}
-            onClick={() => openProject("https://todo-app-eight-ecru-89.vercel.app/","_blank")}
+            onClick={() => openProject("https://todo-app-xntu.vercel.app/","_blank")}
           >
             TODO APP
           </button>
