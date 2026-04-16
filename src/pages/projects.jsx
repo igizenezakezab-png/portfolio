@@ -16,9 +16,9 @@ export default function Projects() {
             A system that manages vehicle parking and helps organize spaces.
           </p>
 
-          <a 
-            href="https://parking-topaz.vercel.app/" 
-            target="_blank" 
+          <a
+            href="https://parking-topaz.vercel.app/"
+            target="_blank"
             rel="noopener noreferrer"
             style={styles.buttonLink}
           >
@@ -33,9 +33,9 @@ export default function Projects() {
             A task manager app that allows users to add, update, and delete daily tasks.
           </p>
 
-          <a 
+          <a
             href="https://todo-app-chi-self-29.vercel.app/"
-            target="_blank" 
+            target="_blank"
             rel="noopener noreferrer"
             style={styles.buttonLink}
           >
