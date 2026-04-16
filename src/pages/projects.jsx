@@ -1,8 +1,5 @@
 export default function Projects() {
-  const openProject = (url) => {
-    window.open(url, "_blank");
-  };
-
+  // Using a standard link is more reliable for external projects
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>My Projects</h1>
@@ -12,23 +9,25 @@ export default function Projects() {
       </p>
 
       <div style={styles.grid}>
-        {/* PROJECT 1 */}
+        {/* PARKING PROJECT */}
         <div style={styles.card}>
           <h2 style={styles.projectTitle}>🚗 Parking Management System</h2>
-
           <p style={styles.desc}>
             A system that manages vehicle parking and helps organize spaces.
           </p>
-
-          <button
-            style={styles.button}
-            onClick={() =>
-              openProject("https://parking-topaz.vercel.app/")
-            }
+          
+          {/* Using <a> tag styled as a button for better compatibility */}
+          <a 
+            href="https://parking-topaz.vercel.app/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={styles.buttonLink}
           >
-            View Project
-          </button>
+            Open Project
+          </a>
         </div>
+
+        {/* Todo App removed from here */}
       </div>
     </div>
   );
@@ -43,19 +42,8 @@ const styles = {
     padding: "40px",
     textAlign: "center",
   },
-
-  title: {
-    fontSize: "40px",
-    marginBottom: "20px",
-  },
-
-  text: {
-    maxWidth: "700px",
-    margin: "0 auto",
-    color: "#cbd5e1",
-    marginBottom: "40px",
-  },
-
+  title: { fontSize: "40px", marginBottom: "20px" },
+  text: { maxWidth: "700px", margin: "0 auto", color: "#cbd5e1", marginBottom: "40px" },
   grid: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
@@ -63,33 +51,19 @@ const styles = {
     maxWidth: "900px",
     margin: "0 auto",
   },
-
-  card: {
-    background: "#1e293b",
-    padding: "25px",
-    borderRadius: "15px",
-    textAlign: "left",
-  },
-
-  projectTitle: {
-    fontSize: "20px",
-    marginBottom: "10px",
-    color: "#38bdf8",
-  },
-
-  desc: {
-    fontSize: "14px",
-    color: "#cbd5e1",
-    marginBottom: "15px",
-  },
-
-  button: {
+  card: { background: "#1e293b", padding: "25px", borderRadius: "15px", textAlign: "left" },
+  projectTitle: { fontSize: "20px", marginBottom: "10px", color: "#38bdf8" },
+  desc: { fontSize: "14px", color: "#cbd5e1", marginBottom: "15px" },
+  
+  // Style for the link to look like your original button
+  buttonLink: {
+    display: "inline-block",
     padding: "10px 15px",
     background: "#38bdf8",
-    border: "none",
     borderRadius: "8px",
-    cursor: "pointer",
     fontWeight: "bold",
     color: "black",
+    textDecoration: "none", // Removes the underline
+    textAlign: "center"
   },
 };
