@@ -66,6 +66,7 @@ const styles = {
     padding: "25px",
     borderRadius: "15px",
     textAlign: "left",
+    transition: "0.3s ease",
   },
 
   projectTitle: {
