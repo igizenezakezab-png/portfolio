@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaFacebookMessenger,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -49,16 +44,6 @@ export default function Contact() {
           />
 
           <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={form.email}
-            onChange={handleChange}
-            style={styles.input}
-            required
-          />
-
-          <input
             name="phone_number"
             placeholder="Phone Number"
             value={form.phone_number}
@@ -85,34 +70,28 @@ export default function Contact() {
         <div style={styles.infoBox}>
           <h2>My Social Media</h2>
 
-          <p>
-            <FaFacebook color="#1877F2" /> Facebook:keza belyse
+          <p style={styles.social}>
+            <FaFacebook color="#1877F2" size={20} />
             <a
-              href="https://www.facebook.com/keza.belyse"
+              href="https://www.facebook.com/keza.belyse.641474/"
               target="_blank"
               rel="noreferrer"
               style={styles.link}
             >
-              keza belyse
+              Facebook Profile
             </a>
           </p>
 
-          <p>
-            <FaFacebookMessenger color="#00B2FF" /> Messenger: keza belyse
-          </p>
-
-          <p>
-            <FaInstagram color="#E1306C" /> Instagram: keza_b🏀
+          <p style={styles.social}>
+            <FaInstagram color="#E1306C" size={20} />
             <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noreferrer"
-            style={styles.link}
-            ></a>
-          </p>
-
-          <p>
-            <FaEnvelope /> Email: youremail@gmail.com
+              href="https://www.instagram.com/keza7868/"
+              target="_blank"
+              rel="noreferrer"
+              style={styles.link}
+            >
+              Instagram Profile
+            </a>
           </p>
         </div>
 
@@ -169,11 +148,18 @@ const styles = {
     background: "#1e293b",
     padding: "20px",
     borderRadius: "10px",
-    lineHeight: "2",
+  },
+
+  social: {
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    margin: "15px 0",
   },
 
   link: {
     color: "#38bdf8",
     textDecoration: "none",
+    fontWeight: "bold",
   },
 };

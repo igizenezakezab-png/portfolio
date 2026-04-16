@@ -1,5 +1,6 @@
 import "./home.css";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const roles = [
@@ -11,6 +12,7 @@ export default function Home() {
   ];
 
   const [index, setIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,19 +24,6 @@ export default function Home() {
 
   return (
     <div className="home">
-      {/* NAVBAR */}
-      <nav className="navbar">
-        <h2 className="logo">KB</h2>
-        <div className="links">
-          <a href="home">Home</a>
-          <a href="about">About</a>
-          <a href="skills">Skills</a>
-          <a href="projects">Projects</a>
-          <a href="contact">Contact</a>
-        </div>
-      </nav>
-
-      {/* HERO */}
       <section className="hero">
         <div className="hero-left">
           <p className="intro">WELCOME TO MY PORTFOLIO</p>
@@ -48,13 +37,23 @@ export default function Home() {
           </h2>
 
           <p className="description">
-            Passionate developer building modern web applications. Explore my
-            journey, projects, and skills as I grow in tech.
+            Passionate developer building modern web applications.
           </p>
 
           <div className="buttons">
-            <button className="btn primary">View Projects</button>
-            <button className="btn outline">Contact Me</button>
+            <button
+              className="btn primary"
+              onClick={() => navigate("/projects")}
+            >
+              View Projects
+            </button>
+
+            <button
+              className="btn outline"
+              onClick={() => navigate("/contact")}
+            >
+              Contact Me
+            </button>
           </div>
         </div>
 

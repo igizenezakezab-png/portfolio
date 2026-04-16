@@ -2,20 +2,21 @@ import { Routes, Route, Link } from "react-router-dom";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Contact from "./pages/contact";
-import Skills from "./pages/skills";
+import Contact from "./pages/Contact";
+import Skills from "./pages/Skills";
 import Projects from "./pages/projects";
+<p></p>
 
 export default function App() {
   return (
     <>
       {/* NAVBAR */}
       <nav style={styles.nav}>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/skills">Skills</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/contact">Contact</Link>
+        <Link style={styles.link} to="/">Home</Link>
+        <Link style={styles.link} to="/about">About</Link>
+        <Link style={styles.link} to="/skills">Skills</Link>
+        <Link style={styles.link} to="/projects">Projects</Link>
+        <Link style={styles.link} to="/contact">Contact</Link>
       </nav>
 
       {/* ROUTES */}
@@ -33,9 +34,13 @@ export default function App() {
 const styles = {
   nav: {
     display: "flex",
-    gap: "15px",
+    gap: "20px",
     padding: "15px",
     background: "#0f172a",
-    color: "white"
-  }
+  },
+  link: {
+    color: "white",
+    textDecoration: "none",
+    fontWeight: "bold",
+  },
 };

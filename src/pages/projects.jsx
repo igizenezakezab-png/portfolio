@@ -1,48 +1,42 @@
 export default function Projects() {
-  
+
   const openProject = (url) => {
     window.open(url, "_blank");
   };
 
   return (
     <div style={styles.container}>
-      
       <h1 style={styles.title}>My Projects</h1>
 
       <p style={styles.text}>
-        These are some of the projects I built while learning React and full-stack
-        development. They help me practice real-world problem solving.
+        These are some of the projects I built while learning React.
       </p>
 
       <div style={styles.grid}>
 
-        {/* PROJECT 1 */}
         <div style={styles.card}>
           <h2 style={styles.projectTitle}>🚗 Parking Management System</h2>
-
           <p style={styles.desc}>
-            A system that manages vehicle parking. It helps track vehicles,
-            manage parking spaces, and improve organization.
+            A system that manages vehicle parking.
           </p>
-<button
-  onClick={() => window.open("https://parking-topaz.vercel.app/", "_blank")}
->
-  Parking Management System
-</button>
+
+          <button
+            onClick={() => openProject("https://parking-topaz.vercel.app/")}
+          >
+            Parking Management System
+          </button>
         </div>
 
-        {/* PROJECT 2 */}
         <div style={styles.card}>
           <h2 style={styles.projectTitle}>✅ Todo App</h2>
 
           <p style={styles.desc}>
-            A simple task manager app that allows users to add, delete, and
-            organize daily tasks efficiently.
+            A simple task manager app.
           </p>
 
           <button
             style={styles.button}
-            onClick={() => openProject("https://todo-app-xntu.vercel.app/","_blank")}
+            onClick={() => openProject("https://todo-app-xntu.vercel.app/")}
           >
             TODO APP
           </button>
@@ -53,7 +47,6 @@ export default function Projects() {
   );
 }
 
-/* STYLES */
 const styles = {
   container: {
     minHeight: "100vh",
@@ -62,55 +55,38 @@ const styles = {
     padding: "40px",
     textAlign: "center"
   },
-
   title: {
     fontSize: "40px",
     marginBottom: "20px"
   },
-
   text: {
     maxWidth: "750px",
     margin: "0 auto",
     color: "#cbd5e1",
-    marginBottom: "40px",
-    lineHeight: "1.6"
+    marginBottom: "40px"
   },
-
   grid: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-    gap: "20px",
-    maxWidth: "900px",
-    margin: "0 auto"
+    gap: "20px"
   },
-
   card: {
     background: "#1e293b",
     padding: "25px",
     borderRadius: "15px",
     textAlign: "left"
   },
-
   projectTitle: {
-    fontSize: "20px",
-    marginBottom: "10px",
     color: "#38bdf8"
   },
-
   desc: {
-    fontSize: "14px",
-    color: "#cbd5e1",
-    lineHeight: "1.6",
-    marginBottom: "15px"
+    color: "#cbd5e1"
   },
-
   button: {
-    padding: "10px 15px",
+    padding: "10px",
+    background: "#38bdf8",
     border: "none",
     borderRadius: "8px",
-    background: "#38bdf8",
-    color: "black",
-    cursor: "pointer",
-    fontWeight: "bold"
+    cursor: "pointer"
   }
 };
