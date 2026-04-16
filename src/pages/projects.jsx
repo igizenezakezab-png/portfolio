@@ -24,7 +24,7 @@ export default function Projects() {
           <button
             style={styles.button}
             onClick={() =>
-              openProject("https://parking-topaz.vercel.app/")
+              openProject("https://parking-topaz.vercel.app/bank account")
             }
           >
             Parking Management System
@@ -42,7 +42,7 @@ export default function Projects() {
           <button
             style={styles.button}
             onClick={() =>
-              openProject("https://todo-app-xntu.vercel.app/")
+              openProject("https://todo-app-xntu.vercel.app/bank account")
             }
           >
             TODO APP
