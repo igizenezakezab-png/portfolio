@@ -12,7 +12,6 @@ export default function Projects() {
       </p>
 
       <div style={styles.grid}>
-
         {/* PROJECT 1 */}
         <div style={styles.card}>
           <h2 style={styles.projectTitle}>🚗 Parking Management System</h2>
@@ -24,31 +23,12 @@ export default function Projects() {
           <button
             style={styles.button}
             onClick={() =>
-              openProject("https://parking-topaz.vercel.app/bank account")
+              openProject("https://parking-topaz.vercel.app/")
             }
           >
-            Parking Management System
+            View Project
           </button>
         </div>
-
-        {/* PROJECT 2 */}
-        <div style={styles.card}>
-          <h2 style={styles.projectTitle}>✅ Todo App</h2>
-
-          <p style={styles.desc}>
-            A simple task manager app built with React.
-          </p>
-
-          <button
-            style={styles.button}
-            onClick={() =>
-              openProject("https://todo-app-xntu.vercel.app/bank account")
-            }
-          >
-            TODO APP
-          </button>
-        </div>
-
       </div>
     </div>
   );
