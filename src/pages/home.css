@@ -1,3 +1,4 @@
+
 /* GLOBAL */
 .home {
   background: #0f172a;
@@ -81,11 +82,11 @@
 /* BUTTONS */
 .buttons {
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .btn {
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -141,4 +142,58 @@
   left: -10px;
   filter: blur(40px);
   z-index: 1;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  /* HERO LAYOUT STACK */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 20px;
+    height: auto;
+  }
+
+  /* TEXT SIZES */
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .role {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  /* IMAGE SMALLER */
+  .image-wrapper {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+  }
+
+  .glow {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* NAVBAR PADDING SMALLER */
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  /* BUTTONS */
+  .btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  /* LINKS SPACING */
+  .links a {
+    margin-left: 15px;
+    font-size: 0.9rem;
+  }
 }
