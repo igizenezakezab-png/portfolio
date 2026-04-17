@@ -4,8 +4,8 @@ import "./App.css";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Skills from "./pages/Skills";
+import Contact from "./pages/contact";
+import Skills from "./pages/skills";
 import Projects from "./pages/projects";
 
 export default function App() {
