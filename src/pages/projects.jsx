@@ -1,12 +1,4 @@
 export default function Projects() {
-  const handleEnter = (e) => {
-    e.currentTarget.style.transform = "scale(1.03)";
-  };
-
-  const handleLeave = (e) => {
-    e.currentTarget.style.transform = "scale(1)";
-  };
-
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>My Projects</h1>
@@ -18,19 +10,31 @@ export default function Projects() {
       <div style={styles.grid}>
 
         {/* PARKING PROJECT */}
-        <div
-          style={styles.card}
-          onMouseEnter={handleEnter}
-          onMouseLeave={handleLeave}
-        >
+        <div style={styles.card}>
           <h2 style={styles.projectTitle}>🚗 Parking Management System</h2>
-
           <p style={styles.desc}>
             A system that manages vehicle parking and helps organize spaces.
           </p>
 
           <a
             href="https://parking-topaz.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={styles.buttonLink}
+          >
+            Open Project
+          </a>
+        </div>
+
+        {/* TODO PROJECT */}
+        <div style={styles.card}>
+          <h2 style={styles.projectTitle}>✅ Todo App</h2>
+          <p style={styles.desc}>
+            A task manager app that allows users to add, update, and delete daily tasks.
+          </p>
+
+          <a
+            href="https://todo-app-chi-self-29.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             style={styles.buttonLink}
@@ -79,8 +83,6 @@ const styles = {
     padding: "25px",
     borderRadius: "15px",
     textAlign: "left",
-    transition: "0.3s ease",
-    transform: "scale(1)",
   },
 
   projectTitle: {
